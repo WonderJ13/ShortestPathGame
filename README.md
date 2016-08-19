@@ -1,0 +1,2 @@
+# ShortestPathGame
+This is a little game made to teach people to figure out the shortest path from a set of nodes. It uses a GUI system made using the tkinter module in python version 3.4.4. This will be turned into an executable soon for anyone to use without having to download python. After the executable is made, there's no reason to contribute to this project any further, so it'll stand on github for anyone to freely download and play for themselves. Thanks for trying this program out, means a lot. (^.^)
