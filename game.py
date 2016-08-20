@@ -8,7 +8,7 @@ class Application(tk.Frame):
         master.wm_title("Find Shortest Path")
         self.circleSize = 4
         master.resizable(width=False, height=False)
-        master.geometry('{}x{}'.format(350, 256))
+        master.geometry('{}x{}'.format(375, 256))
         self.pack()
         self.create_widgets()
         self.selectedNodes = []
@@ -128,7 +128,7 @@ class Application(tk.Frame):
         self.clear.pack()
 
         self.reset = tk.Button(self)
-        self.reset['text'] = "Reset"
+        self.reset['text'] = "Make New Board"
         self.reset['command'] = self.resetWindow
         self.reset.pack()
 
