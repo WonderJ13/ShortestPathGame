@@ -1,5 +1,6 @@
 from random import randint
 import math, time
+from tkinter import messagebox
 import tkinter as tk
 
 class Application(tk.Frame):
@@ -81,15 +82,15 @@ class Application(tk.Frame):
     def checkResults(self):
         hopefullythepersonknowswhattheyaredoing = self.compareAnswers()
         if hopefullythepersonknowswhattheyaredoing != "nahda" and hopefullythepersonknowswhattheyaredoing != "ERROR":
-            print("Correct")
-            print("Answer: " + str(hopefullythepersonknowswhattheyaredoing))
-            tk.messagebox.showinfo("Congratulations", "You've found the shortest path!\nAnswer in length: "+str(hopefullythepersonknowswhattheyaredoing))
+            ###print("Correct")
+            ###print("Answer: " + str(hopefullythepersonknowswhattheyaredoing))
+            messagebox.showinfo("Congratulations", "You've found the shortest path!\nAnswer in length: "+str(hopefullythepersonknowswhattheyaredoing))
         elif hopefullythepersonknowswhattheyaredoing == "nahda":
-            print("You Suck, Try Again xD")
-            tk.messagebox.showinfo("Try Again", "The path you've made is not correct. Try again.")
+            ###print("You Suck, Try Again xD")
+            messagebox.showinfo("Try Again", "The path you've made is not correct. Try again.")
         else:
-            print("You didn't even select every node (%.%)")
-            tk.messagebox.showinfo("Srsly", "You haven't selected every node on the screen, so I can't calculate your answer.")
+            ###print("You didn't even select every node (%.%)")
+            messagebox.showinfo("Cannot Compute Length", "You haven't selected every node on the screen, so I can't calculate your answer.")
 
     def compareAnswers(self):
         if len(self.selectedNodes) != len(self.nodes):
@@ -103,7 +104,7 @@ class Application(tk.Frame):
                 continue
             answerGiven += node.distance(startNode)
             startNode = node
-        print(str(answerGiven) + " == " +str(correctAnswer)+"?")
+        ###print(str(answerGiven) + " == " +str(correctAnswer)+"?")
         if answerGiven == correctAnswer:
             return answerGiven
         return "nahda"
